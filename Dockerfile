@@ -11,8 +11,8 @@ LABEL maintainer="Tobias Wiese [git@twiese99.de]"
 WORKDIR /ubuntu-mirror
 
 RUN apk add --no-cache rsync bash
-COPY --from=build /build/ubuntu-mirror .
-ADD *.sh .
+COPY --from=build /build/ubuntu-mirror ./
+ADD *.sh ./
 
 VOLUME /data
 
