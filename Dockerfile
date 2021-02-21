@@ -7,6 +7,7 @@ RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o /build/ubuntu-mirror
 # Production Image
 FROM alpine:latest
 LABEL maintainer="Tobias Wiese [git@twiese99.de]"
+LABEL org.opencontainers.image.source https://github.com/twiese99/ubuntu-mirror
 
 WORKDIR /ubuntu-mirror
 
