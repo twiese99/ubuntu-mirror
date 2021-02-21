@@ -2,7 +2,7 @@
 FROM golang AS build
 WORKDIR /build
 COPY ubuntu-mirror.go .
-RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o /build/ubuntu-mirror
+RUN CGO_ENABLED=0 GOARCH=amd64 GOOS=linux go build -o /build/ubuntu-mirror ubuntu-mirror.go
 
 # Production Image
 FROM alpine:latest
